@@ -1,4 +1,5 @@
 # Doggy-details - Flutter UI
+Flutter app created to improve and develop flutter skills
 
 **Packages we are used:**
 
