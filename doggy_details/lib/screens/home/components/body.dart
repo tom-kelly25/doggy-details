@@ -24,6 +24,23 @@ class body extends StatelessWidget {
                       bottomRight: Radius.circular(36),
                     ),
                   ),
+                  child: Row(
+                    children: <Widget>[
+                      Flexible(
+                        child: Container(
+                          padding: new EdgeInsets.only(left: 30.0),
+                          child: Text(
+                            "Welcome to Doggy Details",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w900,
+                                fontFamily: 'Open Sans',
+                                fontSize: 36),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Positioned(
                   bottom: 0,
