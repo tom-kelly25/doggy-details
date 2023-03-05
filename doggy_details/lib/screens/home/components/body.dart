@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:doggy_details/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'header.dart';
+import 'titleAndButton.dart';
 
 class body extends StatelessWidget {
   @override
@@ -11,41 +12,46 @@ class body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           header(size: size),
-          TitleWithCustomUnderLine(),
-        ],
-      ),
-    );
-  }
-}
-
-class TitleWithCustomUnderLine extends StatelessWidget {
-  const TitleWithCustomUnderLine({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 24,
-      child: Stack(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(left: kDefaultPadding / 4),
-            child: Text(
-              "Recomended",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          titleAndButton(),
+          Container(
+            margin: EdgeInsets.only(
+              left: kDefaultPadding,
+              top: kDefaultPadding / 2,
+              bottom: kDefaultPadding * 2.5,
             ),
-          ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              margin: EdgeInsets.only(right: kDefaultPadding / 4),
-              height: 7,
-              color: kPrimaryColor.withOpacity(0.2),
+            width: size.width * 0.4,
+            child: Column(
+              children: <Widget>[
+                Image.asset("assets/img/german shepherd.png"),
+                Container(
+                  padding: EdgeInsets.all(kDefaultPadding / 2),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(0, 10),
+                        blurRadius: 50,
+                        color: kPrimaryColor.withOpacity(0.23),
+                      )
+                    ],
+                  ),
+                  child: Row(
+                    children: <Widget>[
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                                text: "German Shepherd".toUpperCase(),
+                                style: Theme.of(context).textTheme.button)
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
             ),
-          ),
+          )
         ],
       ),
     );
