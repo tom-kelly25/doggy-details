@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:doggy_details/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'header.dart';
+import 'titleAndButton.dart';
 
 class body extends StatelessWidget {
   @override
@@ -11,62 +12,46 @@ class body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           header(size: size),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-            child: Row(
-              children: [
-                TitleWithCustomUnderLine(),
-                Spacer(),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    primary: kPrimaryColor,
+          titleAndButton(),
+          Container(
+            margin: EdgeInsets.only(
+              left: kDefaultPadding,
+              top: kDefaultPadding / 2,
+              bottom: kDefaultPadding * 2.5,
+            ),
+            width: size.width * 0.4,
+            child: Column(
+              children: <Widget>[
+                Image.asset("assets/img/german shepherd.png"),
+                Container(
+                  padding: EdgeInsets.all(kDefaultPadding / 2),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(0, 10),
+                        blurRadius: 50,
+                        color: kPrimaryColor.withOpacity(0.23),
+                      )
+                    ],
                   ),
-                  onPressed: () {},
-                  child: Text(
-                    "More",
-                    style: TextStyle(color: Colors.white),
+                  child: Row(
+                    children: <Widget>[
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                                text: "German Shepherd".toUpperCase(),
+                                style: Theme.of(context).textTheme.button)
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 )
               ],
             ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class TitleWithCustomUnderLine extends StatelessWidget {
-  const TitleWithCustomUnderLine({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 24,
-      child: Stack(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(left: kDefaultPadding / 4),
-            child: Text(
-              "Recomended",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            right: 0,
-            child: Container(
-              margin: EdgeInsets.only(right: kDefaultPadding / 4),
-              height: 7,
-              color: kPrimaryColor.withOpacity(0.2),
-            ),
-          ),
+          )
         ],
       ),
     );
