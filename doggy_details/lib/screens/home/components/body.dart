@@ -22,11 +22,21 @@ class body extends StatelessWidget {
             width: size.width * 0.4,
             child: Column(
               children: <Widget>[
-                Image.asset("assets/img/german shepherd.png"),
+                ClipRRect(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10)),
+                  child: Image.asset(
+                    ("assets/img/german shepherd.png"),
+                  ),
+                ),
                 Container(
                   padding: EdgeInsets.all(kDefaultPadding / 2),
                   decoration: BoxDecoration(
                     color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10)),
                     boxShadow: [
                       BoxShadow(
                         offset: Offset(0, 10),
