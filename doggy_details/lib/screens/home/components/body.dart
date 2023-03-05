@@ -11,7 +11,28 @@ class body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           header(size: size),
-          TitleWithCustomUnderLine(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+            child: Row(
+              children: [
+                TitleWithCustomUnderLine(),
+                Spacer(),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    primary: kPrimaryColor,
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "More",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
