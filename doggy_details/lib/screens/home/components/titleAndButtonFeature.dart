@@ -1,36 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:doggy_details/constants.dart';
 
-class titleAndButton extends StatelessWidget {
-  const titleAndButton({
+class titleAndButtonFeature extends StatelessWidget {
+  const titleAndButtonFeature({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        child: Row(
-          children: [
-            TitleWithCustomUnderLine(),
-            Spacer(),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                primary: kPrimaryColor,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+      child: Row(
+        children: [
+          TitleWithCustomUnderLine(),
+          Spacer(),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
               ),
-              onPressed: () {},
-              child: Text(
-                "More",
-                style: TextStyle(color: Colors.white),
-              ),
-            )
-          ],
-        ),
+              primary: kPrimaryColor,
+            ),
+            onPressed: () {},
+            child: Text(
+              "More",
+              style: TextStyle(color: Colors.white),
+            ),
+          )
+        ],
       ),
     );
   }
@@ -50,7 +47,7 @@ class TitleWithCustomUnderLine extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: kDefaultPadding / 4),
             child: Text(
-              "Recomended",
+              "Featured Doggy",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
