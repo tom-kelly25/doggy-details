@@ -54,7 +54,7 @@ class recomend extends StatelessWidget {
       margin: EdgeInsets.only(
         left: kDefaultPadding,
         top: kDefaultPadding / 2,
-        bottom: kDefaultPadding * 2.5,
+        bottom: kDefaultPadding,
       ),
       width: size.width * 0.4,
       child: Column(

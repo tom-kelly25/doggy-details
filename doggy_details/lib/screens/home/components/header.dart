@@ -50,7 +50,9 @@ class header extends StatelessWidget {
             child: Container(
               alignment: Alignment.center,
               margin: EdgeInsets.symmetric(horizontal: kDefaultPadding),
-              padding: EdgeInsets.symmetric(horizontal: kDefaultPadding),
+              padding: EdgeInsets.symmetric(
+                horizontal: kDefaultPadding,
+              ),
               height: 54,
               decoration: BoxDecoration(
                 color: Colors.white,
