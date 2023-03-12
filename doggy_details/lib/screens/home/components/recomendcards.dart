@@ -90,7 +90,7 @@ class recomend extends StatelessWidget {
                         TextSpan(
                             // text: "German Shepherd".toUpperCase(),
                             text: "$title\n".toUpperCase(),
-                            style: Theme.of(context).textTheme.button)
+                            style: Theme.of(context).textTheme.button),
                       ],
                     ),
                   ),
