@@ -34,7 +34,6 @@ class header extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w900,
-                          fontFamily: 'Times New Roman',
                           fontSize: 36),
                       textAlign: TextAlign.center,
                     ),
