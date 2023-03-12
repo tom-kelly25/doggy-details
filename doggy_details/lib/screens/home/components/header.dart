@@ -29,14 +29,14 @@ class header extends StatelessWidget {
               children: <Widget>[
                 Flexible(
                   child: Container(
-                    padding: new EdgeInsets.only(left: 30.0),
                     child: Text(
                       "Welcome to Doggy Details!",
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w900,
-                          fontFamily: 'Open Sans',
+                          fontFamily: 'Times New Roman',
                           fontSize: 36),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),

@@ -17,7 +17,7 @@ class featuredCard extends StatelessWidget {
         margin: EdgeInsets.only(
           left: kDefaultPadding,
           top: kDefaultPadding / 2,
-          bottom: kDefaultPadding * 4,
+          bottom: kDefaultPadding * 2,
         ),
         width: size.width * 0.8,
         height: 600,

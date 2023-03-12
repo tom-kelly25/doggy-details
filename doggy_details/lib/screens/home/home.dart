@@ -2,6 +2,7 @@ import 'package:doggy_details/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:doggy_details/screens/home/components/body.dart';
+import 'my_bottom_nav_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: body(),
+      bottomNavigationBar: MyBottomNavBar(),
     );
   }
 

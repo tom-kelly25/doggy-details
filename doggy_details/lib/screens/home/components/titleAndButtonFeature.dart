@@ -48,7 +48,11 @@ class TitleWithCustomUnderLine extends StatelessWidget {
             padding: const EdgeInsets.only(left: kDefaultPadding / 4),
             child: Text(
               "Featured Doggy",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Times New Roman',
+              ),
             ),
           ),
           Positioned(
