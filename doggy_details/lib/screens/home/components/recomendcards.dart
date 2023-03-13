@@ -1,3 +1,5 @@
+import 'package:doggy_details/screens/details/components/body.dart';
+import 'package:doggy_details/screens/details/details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:doggy_details/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -16,6 +18,18 @@ class recomendcards extends StatelessWidget {
       child: Row(
         children: [
           recomend(
+            image: "assets/img/german shepherd.png",
+            title: "german shepherd",
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsScreen(),
+                ),
+              );
+            },
+          ),
+          recomend(
             image: "assets/img/labrador.png",
             title: "labrador",
             press: () {},
@@ -23,11 +37,6 @@ class recomendcards extends StatelessWidget {
           recomend(
             image: "assets/img/tibetan mastiff.png",
             title: "tibetan mastiff",
-            press: () {},
-          ),
-          recomend(
-            image: "assets/img/german shepherd.png",
-            title: "german shepherd",
             press: () {},
           ),
         ],
@@ -45,7 +54,7 @@ class recomend extends StatelessWidget {
   });
   final String image;
   final String title;
-  final Function press;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +76,7 @@ class recomend extends StatelessWidget {
             ),
           ),
           GestureDetector(
+            onTap: press,
             child: Container(
               padding: EdgeInsets.all(kDefaultPadding / 2),
               decoration: BoxDecoration(
