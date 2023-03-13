@@ -16,6 +16,11 @@ class recomendcards extends StatelessWidget {
       child: Row(
         children: [
           recomend(
+            image: "assets/img/german shepherd.png",
+            title: "german shepherd",
+            press: () {},
+          ),
+          recomend(
             image: "assets/img/labrador.png",
             title: "labrador",
             press: () {},
@@ -23,11 +28,6 @@ class recomendcards extends StatelessWidget {
           recomend(
             image: "assets/img/tibetan mastiff.png",
             title: "tibetan mastiff",
-            press: () {},
-          ),
-          recomend(
-            image: "assets/img/german shepherd.png",
-            title: "german shepherd",
             press: () {},
           ),
         ],

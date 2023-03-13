@@ -30,7 +30,7 @@ class MyBottomNavBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           IconButton(
-            icon: SvgPicture.asset("assets/icons/back_arrow.svg"),
+            icon: SvgPicture.asset("assets/icons/paw.svg"),
             onPressed: () {},
           ),
           IconButton(
