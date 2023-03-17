@@ -16,19 +16,18 @@ class featuredCard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           ClipRRect(
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(kDefaultPadding),
-              bottomRight: Radius.circular(kDefaultPadding),
-            ),
             child: Container(
               margin: EdgeInsets.only(
-                  left: kDefaultPadding,
-                  top: kDefaultPadding / 2,
-                  bottom: kDefaultPadding / 10),
+                left: kDefaultPadding,
+                top: kDefaultPadding / 2,
+              ),
               width: size.width * 0.8,
               height: 500,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                ),
                 image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(
@@ -40,14 +39,22 @@ class featuredCard extends StatelessWidget {
           ),
           Container(
             width: size.width * 0.8,
-            margin: EdgeInsets.symmetric(
-              horizontal: kDefaultPadding,
+            margin: EdgeInsets.only(
+              left: kDefaultPadding,
+              bottom: kDefaultPadding * 2,
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(kDefaultPadding),
                 bottomRight: Radius.circular(kDefaultPadding),
               ),
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0, 10),
+                  blurRadius: 50,
+                  color: kPrimaryColor.withOpacity(0.23),
+                )
+              ],
               color: Colors.white,
             ),
             child: Padding(
@@ -65,7 +72,9 @@ class featuredCard extends StatelessWidget {
                       fontSize: 16.0,
                     ),
                   ),
-                  SizedBox(height: kDefaultPadding / 2),
+                  SizedBox(
+                    height: kDefaultPadding / 2,
+                  ),
                   Text(
                     'Huskies are a breed of dog that originated in Siberia, Russia.',
                     style: TextStyle(

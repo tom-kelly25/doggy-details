@@ -18,8 +18,8 @@ class recomendcards extends StatelessWidget {
       child: Row(
         children: [
           recomend(
-            image: "assets/img/german shepherd.png",
-            title: "german shepherd",
+            image: "assets/img/labrador.png",
+            title: "labrador",
             press: () {
               Navigator.push(
                 context,
@@ -30,8 +30,8 @@ class recomendcards extends StatelessWidget {
             },
           ),
           recomend(
-            image: "assets/img/labrador.png",
-            title: "labrador",
+            image: "assets/img/german shepherd.png",
+            title: "german shepherd",
             press: () {},
           ),
           recomend(
