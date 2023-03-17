@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import "package:doggy_details/constants.dart";
+import 'package:flutter_svg/flutter_svg.dart';
+import 'imageAndIcon.dart';
+import 'title.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -7,35 +10,84 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Column(
       children: <Widget>[
-        Row(
-          children: <Widget>[
-            Expanded(
-              child: Column(),
-            ),
-            Container(
-              height: size.height * 0.8,
-              width: size.width * 0.75,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(63),
-                  bottomLeft: Radius.circular(63),
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 10),
-                    blurRadius: 60,
-                    color: kPrimaryColor.withOpacity(0.29),
+        imageAndIcon(size: size),
+        title(),
+        SizedBox(
+          height: 5,
+        ),
+        Positioned(
+          bottom: 0,
+          left: 0,
+          right: 0,
+          child: Row(
+            children: <Widget>[
+              SizedBox(
+                width: size.width / 2,
+                height: 50,
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      right: BorderSide(
+                        color: Colors.white,
+                        width: 3.0,
+                      ),
+                    ),
                   ),
-                ],
-                image: DecorationImage(
-                  alignment: Alignment.centerLeft,
-                  fit: BoxFit.cover,
-                  image: AssetImage("assets/img/labrador.png"),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(20),
+                        ),
+                      ),
+                      primary: kPrimaryColor,
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      "More information",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
                 ),
               ),
-            ),
-          ],
-        ),
+              SizedBox(
+                width: size.width / 2,
+                height: 50,
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      left: BorderSide(
+                        color: Colors.white,
+                        width: 3.0,
+                      ),
+                    ),
+                  ),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                        ),
+                      ),
+                      primary: kPrimaryColor,
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      "More Images",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )
       ],
     );
   }
